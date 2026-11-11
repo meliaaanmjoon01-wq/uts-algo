@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Biodata Online | Amelia Julianti</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0c1424;--panel:#131f36;--panel2:#1a2a47;--line:#263a5e;--text:#e6ecf5;--mute:#93a4c0;--accent:#5cc8ff;--warm:#ffb454;--err:#ff7b8a;
+--mono:'IBM Plex Mono',ui-monospace,Consolas,monospace;--sans:'IBM Plex Sans',system-ui,sans-serif}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font:400 1rem/1.65 var(--sans)}
+a{color:inherit;text-decoration:none}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+section{padding:5rem 1.25rem;scroll-margin-top:3.5rem}
+.wrap{max-width:1040px;margin:0 auto}
+h1,h2,h3{font-family:var(--mono);line-height:1.2}
+h2{font-size:clamp(1.6rem,4vw,2.2rem);margin-bottom:.5rem}
+.sub{color:var(--mute);max-width:60ch;margin-bottom:2rem}
+nav{position:sticky;top:0;z-index:10;background:rgba(12,20,36,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:.7rem 1.25rem}
+.logo{font:600 1rem var(--mono);color:var(--accent);white-space:nowrap}
+nav ul{display:flex;gap:.25rem;list-style:none;padding:0;overflow-x:auto}
+nav li a{display:block;padding:.35rem .75rem;border-radius:6px;color:var(--mute);font-size:.9rem;white-space:nowrap}
+nav li a:hover,nav li a.on{background:var(--panel2);color:var(--text)}
+#beranda{padding-top:6rem;padding-bottom:5rem}
+.hero{display:grid;gap:2.5rem;grid-template-columns:1.2fr 1fr;align-items:center}
+h1{font-size:clamp(2rem,6vw,3.4rem);letter-spacing:-.02em}
+.lead{color:var(--mute);margin:1rem 0 1.75rem;max-width:52ch}
+.btn{display:inline-block;padding:.7rem 1.3rem;border-radius:8px;font-weight:600;background:var(--accent);color:#06121f}
+.btn.ghost{background:none;border:1px solid var(--line);color:var(--text);margin-left:.5rem}
+.code{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:1.2rem;font:.88rem/1.7 var(--mono);color:var(--mute);overflow-x:auto}
+.code b{color:var(--accent);font-weight:500}.code i{color:var(--warm);font-style:normal}
+.grid{display:grid;gap:1rem;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:1.4rem}
+.card h3{font-size:1.05rem;margin-bottom:.4rem}.card p{color:var(--mute);font-size:.95rem}
+.chips{display:flex;flex-wrap:wrap;gap:.5rem}
+.chips span{font:500 .88rem var(--mono);padding:.35rem .8rem;border:1px solid var(--line);border-radius:999px;background:var(--panel)}
+dl{display:grid;grid-template-columns:auto 1fr;gap:.4rem 1.5rem}dt{color:var(--mute)}dd{font-weight:500}
+.bukti{display:grid;gap:2.5rem;grid-template-columns:1fr 400px;align-items:start}
+.bukti ul{padding-left:1.1rem;color:var(--mute);font-size:.95rem}.bukti li{margin:.3rem 0}
+.bukti h3{margin:1.5rem 0 .5rem;font-size:1.05rem}
+.calc{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:1rem;width:100%;max-width:420px;margin:0 auto}
+.screen{background:#0a111f;border-radius:10px;padding:.8rem 1rem;text-align:right;font-family:var(--mono);min-height:112px;display:flex;flex-direction:column;justify-content:flex-end;overflow:hidden}
+#top{color:var(--mute);font-size:.9rem;min-height:1.4rem;word-break:break-all}
+#main{font-size:1.9rem;font-weight:500;word-break:break-all;line-height:1.3}
+#main.long{font-size:1.3rem}#main.err{color:var(--err);font-size:1.05rem}
+.bar{display:flex;justify-content:space-between;align-items:center;margin-bottom:.6rem;font:.8rem var(--mono);color:var(--mute)}
+#mode{font:600 .8rem var(--mono);background:var(--panel2);color:var(--accent);border:1px solid var(--line);border-radius:6px;padding:.25rem .7rem;cursor:pointer}
+.keys{display:grid;grid-template-columns:repeat(5,1fr);gap:.45rem;margin-top:.8rem}
+.keys button{font:500 1rem var(--mono);min-height:50px;border:0;border-radius:9px;background:var(--panel2);color:var(--text);cursor:pointer;transition:transform .06s,filter .15s}
+.keys button:hover{filter:brightness(1.2)}.keys button:active{transform:scale(.95)}
+.keys .fn{color:var(--accent);font-size:.92rem}.keys .op{background:#22385f}
+.keys .num{background:#101a2e}.keys .act{background:#3a2a36;color:var(--err)}
+.keys .eq{background:var(--warm);color:#1d1202;font-weight:600;grid-column:span 2}
+.keys .z{grid-column:span 2}
+footer{border-top:1px solid var(--line);padding:2rem 1.25rem;color:var(--mute);text-align:center;font-size:.9rem}
+@media(max-width:860px){.hero,.bukti{grid-template-columns:1fr}section{padding:3.5rem 1rem}.logo{display:none}}
+@media(max-width:380px){.keys{gap:.3rem}.keys button{min-height:46px;font-size:.9rem}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+</style>
+</head>
+<body>
+<nav><div class="wrap"><a class="logo" href="#beranda">amelia.dev</a>
+<ul><li><a href="#beranda" class="on">Beranda</a></li><li><a href="#tentang">Tentang</a></li><li><a href="#skill">Skill</a></li><li><a href="#bukti-belajar">Bukti Belajar</a></li><li><a href="#kontak">Kontak</a></li></ul></div></nav>
+
+<section id="beranda"><div class="wrap hero">
+<div><h1>Amelia Julianti</h1>
+<p class="lead">Mahasiswa Fakultas Komputer, Universitas Ma’soem. Sedang belajar mengubah logika menjadi program yang berjalan.</p>
+<a class="btn" href="#bukti-belajar">Coba kalkulator</a><a class="btn ghost" href="#tentang">Tentang saya</a></div>
+</div></section>
+
+<section id="tentang"><div class="wrap"><h2>Tentang</h2>
+<p class="sub">Biodata singkat tentang saya</p>
+<div class="card"><dl><dt>Nama</dt><dd>Amelia Julianti</dd><dt>NIM</dt><dd>262302004</dd><dt>Fakultas</dt><dd>Komputer</dd><dt>Kampus</dt><dd>Universitas Ma’soem</dd></dl></div></div></section>
+
+<section id="skill"><div class="wrap"><h2>Skill</h2>
+<p class="sub">Teknologi yang sedang saya pelajari dan gunakan.</p>
+<div class="chips"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>Logika Algoritma</span><span>Responsive Design</span></div></div></section>
+
+<section id="bukti-belajar"><div class="wrap"><h2>Bukti Belajar</h2>
+<p class="sub">Perjalanan belajar Logika Algoritma bersama Pa Iin TA 20261</p>
+<div class="bukti"><div>
+<h3>Scientific Calculator (Level 4)</h3>
+<p style="color:var(--mute)">Kalkulator ini memakai parser ekspresi buatan sendiri, bukan eval(), sehingga urutan prioritas operasi selalu benar. Contoh: 25 + 10 × 2 = 45.</p>
+<h3>Fitur</h3>
+<ul><li>Operasi dasar, perpangkatan (^), dan modulo (%)</li><li>sin, cos, tan dengan mode Degree/Radian (awal: Degree)</li><li>√, x², log, ln, π, e, tanda kurung, dan faktorial (!)</li><li>Menggabungkan beberapa fungsi, mis. sin(30) + √25 × 2</li><li>Validasi: bagi nol, akar negatif, log ≤ 0, faktorial non-bulat, kurung tidak seimbang</li><li>Bisa dipakai dengan keyboard (angka, + − * / ^ % ! ( ), Enter, Backspace, Esc)</li></ul>
+<h3>Algoritma</h3>
+<p style="color:var(--mute)">Tokenizer memecah teks menjadi token, lalu recursive descent parser menghitung dengan tingkat: tambah/kurang, kali/bagi/modulo, minus unari, pangkat, faktorial, fungsi dan kurung.</p>
+</div>
+<div class="calc" aria-label="Kalkulator saintifik">
+<div class="bar"><span>Scientific</span><button id="mode" type="button" aria-label="Ganti satuan sudut">DEG</button></div>
+<div class="screen" aria-live="polite"><div id="top"></div><div id="main">0</div></div>
+<div class="keys" id="keys"></div></div></div></div></section>
+
+<section id="kontak"><div class="wrap"><h2>Kontak</h2>
+<p class="sub"></p>
+<div class="card"><p>Email: <i>meliaaanmjoon01@gmail.com</i></p></div></div></section>
+<footer>© 2026 Amelia Julianti. UTS Logika Algoritma, Universitas Ma’soem.</footer>
+
+<script>
+(function(){
+const KEYS=[
+['sin','sin(','fn'],['cos','cos(','fn'],['tan','tan(','fn'],['π','π','fn'],['e','e','fn'],
+['√','√(','fn'],['x²','^2','fn'],['xʸ','^','fn'],['log','log(','fn'],['ln','ln(','fn'],
+['(','(','op'],[')',')','op'],['!','!','op'],['%','%','op'],['⌫','','act back'],
+['7','7','num'],['8','8','num'],['9','9','num'],['÷','÷','op'],['AC','','act clear'],
+['4','4','num'],['5','5','num'],['6','6','num'],['×','×','op'],['−','−','op'],
+['1','1','num'],['2','2','num'],['3','3','num'],['+','+','op'],['Ans','','fn ans'],
+['0','0','num z'],['.','.','num'],['=','','eq']
+];
+const BIN='+−×÷^%',CONT=['+','−','×','÷','^','%','!','^2',')'];
+let expr='',ans=0,ansExpr='0',done=false,error='',deg=true;
+const $=id=>document.getElementById(id),topEl=$('top'),mainEl=$('main'),modeEl=$('mode');
+
+/* ---------- Tokenizer ---------- */
+function tokenize(s){
+  const t=[];let i=0;
+  while(i<s.length){
+    const r=s.slice(i),ch=s[i];
+    if(/\s/.test(ch)){i++;continue}
+    let m=r.match(/^(\d+\.?\d*|\.\d+)/);
+    if(m){t.push({n:parseFloat(m[1])});i+=m[1].length;continue}
+    m=r.match(/^(sin|cos|tan|log|ln)/);
+    if(m){t.push({f:m[1]});i+=m[1].length;continue}
+    if(ch==='√'){t.push({f:'√'});i++;continue}
+    if(ch==='π'){t.push({n:Math.PI});i++;continue}
+    if(ch==='e'){t.push({n:Math.E});i++;continue}
+    if('+−-×÷^%!()'.includes(ch)){t.push({o:ch==='-'?'−':ch});i++;continue}
+    throw Error('Karakter tidak valid');
+  }
+  return t;
+}
+
+/* ---------- Fungsi matematika ---------- */
+const rad=x=>deg?x*Math.PI/180:x;
+const clean=v=>Math.abs(v)<1e-14?0:v;
+function fact(n){
+  if(!Number.isInteger(n)||n<0)throw Error('Faktorial hanya untuk bilangan bulat ≥ 0');
+  if(n>170)throw Error('Hasil terlalu besar');
+  let r=1;for(let i=2;i<=n;i++)r*=i;return r;
+}
+function applyFn(f,a){
+  switch(f){
+    case'sin':return clean(Math.sin(rad(a)));
+    case'cos':return clean(Math.cos(rad(a)));
+    case'tan':if(Math.abs(Math.cos(rad(a)))<1e-12)throw Error('tan tidak terdefinisi untuk sudut ini');
+      return clean(Math.tan(rad(a)));
+    case'√':if(a<0)throw Error('Akar bilangan negatif tidak valid');return Math.sqrt(a);
+    case'log':if(a<=0)throw Error('log hanya untuk bilangan > 0');return Math.log10(a);
+    case'ln':if(a<=0)throw Error('ln hanya untuk bilangan > 0');return Math.log(a);
+  }
+}
+
+/* ---------- Parser (recursive descent) ---------- */
+function parse(tokens){
+  let p=0;
+  const pk=()=>tokens[p],nx=()=>tokens[p++];
+  const isO=(...a)=>pk()&&pk().o&&a.includes(pk().o);
+  const startsOperand=()=>pk()&&(pk().n!==undefined||pk().f||pk().o==='(');
+  function expr(){let v=term();
+    while(isO('+','−')){const o=nx().o,r=term();v=o==='+'?v+r:v-r}
+    return v}
+  function term(){let v=unary();
+    for(;;){
+      if(isO('×','÷','%')){
+        const o=nx().o,r=unary();
+        if(o==='×')v*=r;
+        else{
+          if(r===0)throw Error(o==='÷'?'Tidak bisa dibagi dengan nol':'Modulo nol tidak valid');
+          v=o==='÷'?v/r:v%r;
+        }
+      }else if(startsOperand())v*=unary(); /* perkalian implisit: 2π, 3(4) */
+      else break;
+    }
+    return v}
+  function unary(){
+    if(isO('−')){nx();return -unary()}
+    if(isO('+')){nx();return unary()}
+    return power()}
+  function power(){const b=post();
+    if(isO('^')){nx();return Math.pow(b,unary())}
+    return b}
+  function post(){let v=prim();
+    while(isO('!')){nx();v=fact(v)}
+    return v}
+  function prim(){
+    const t=nx();
+    if(!t)throw Error('Ekspresi belum lengkap');
+    if(t.n!==undefined)return t.n;
+    if(t.o==='('){const v=expr();if(!isO(')'))throw Error('Kurung tidak seimbang');nx();return v}
+    if(t.f)return applyFn(t.f,post());
+    throw Error('Ekspresi tidak valid')}
+  const result=expr();
+  if(p<tokens.length)throw Error('Ekspresi tidak valid');
+  return result;
+}
+
+/* ---------- Format hasil ---------- */
+function fmt(r){
+  if(!Number.isFinite(r))throw Error('Hasil tidak terdefinisi');
+  let n=parseFloat(r.toPrecision(12));if(Object.is(n,-0))n=0;
+  if(n!==0&&(Math.abs(n)>=1e15||Math.abs(n)<1e-9))return n.toExponential(6).replace(/\.?0+e/,'e');
+  return String(n);
+}
+function asExpr(n){
+  const s=String(n);
+  if(!/e/.test(s))return s;
+  const [m,x]=s.split('e');return '('+m+'×10^'+parseInt(x)+')';
+}
+
+/* ---------- Tampilan ---------- */
+function render(){
+  if(error){mainEl.textContent=error;mainEl.className='err';return}
+  const txt=expr||'0';
+  mainEl.textContent=txt;
+  mainEl.className=txt.length>14?'long':'';
+}
+function clearAll(){expr='';done=false;error='';topEl.textContent='';render()}
+function calculate(){
+  if(error){clearAll();return}
+  if(!expr||done)return;
+  try{
+    let s=expr;
+    const open=(s.match(/\(/g)||[]).length,close=(s.match(/\)/g)||[]).length;
+    if(close>open)throw Error('Kurung tidak seimbang');
+    s+=')'.repeat(open-close);
+    const v=parse(tokenize(s)),out=fmt(v);
+    topEl.textContent=expr+' =';
+    ans=parseFloat(out);ansExpr=asExpr(ans);
+    expr=out;done=true;
+    mainEl.textContent=out;mainEl.className=out.length>14?'long':'';
+  }catch(e){error=e.message;topEl.textContent=expr;done=false;render()}
+}
+function press(v,type){
+  if(error){clearAll()}
+  if(type==='back'){
+    if(done){clearAll();return}
+    expr=expr.replace(/(sin\(|cos\(|tan\(|log\(|ln\(|√\()$/,'')===expr?expr.slice(0,-1):expr.replace(/(sin\(|cos\(|tan\(|log\(|ln\(|√\()$/,'');
+    render();return}
+  if(type==='clear'){clearAll();return}
+  if(type==='eq'){calculate();return}
+  if(type==='ans')v=ansExpr;
+  if(done){
+    if(CONT.includes(v)){done=false;expr=ansExpr}
+    else{expr='';done=false;topEl.textContent=''}
+  }
+  if(v==='.'&&/\d*\.\d*$/.test(expr))return;
+  if(v==='.'&&!/\d$/.test(expr))v='0.';
+  if(BIN.includes(v)&&v.length===1){
+    const last=expr.slice(-1);
+    if(BIN.includes(last)){
+      if(v==='−'&&'×÷^%'.includes(last)){}
+      else expr=expr.slice(0,-1);
+    }
+  }
+  expr+=v;render();
+}
+function setMode(){deg=!deg;modeEl.textContent=deg?'DEG':'RAD'}
+
+/* ---------- Pasang tombol ---------- */
+const keysEl=$('keys');
+KEYS.forEach(([label,val,cls])=>{
+  const b=document.createElement('button');
+  b.type='button';b.textContent=label;b.className=cls.replace(/\b(back|clear|ans)\b/,'').trim()+(cls.includes('act')?'':'');
+  const type=/back/.test(cls)?'back':/clear/.test(cls)?'clear':/ans/.test(cls)?'ans':label==='='?'eq':'';
+  if(label==='='){b.className='eq'}
+  b.setAttribute('aria-label',{'⌫':'Hapus karakter terakhir','AC':'Hapus semua','=':'Hitung'}[label]||label);
+  b.addEventListener('click',()=>press(val,type));
+  keysEl.appendChild(b);
+});
+modeEl.addEventListener('click',setMode);
+
+/* ---------- Keyboard ---------- */
+document.addEventListener('keydown',e=>{
+  if(e.ctrlKey||e.metaKey||e.altKey)return;
+  const inCalc=document.activeElement===document.body||document.activeElement.closest('.calc');
+  if(!inCalc)return;
+  const k=e.key,map={'*':'×','/':'÷','-':'−'};
+  if(/^[0-9.+^%!()]$/.test(k)||map[k]){e.preventDefault();press(map[k]||k,'')}
+  else if(k==='Enter'||k==='='){e.preventDefault();press('','eq')}
+  else if(k==='Backspace'){e.preventDefault();press('','back')}
+  else if(k==='Escape'){press('','clear')}
+});
+
+/* ---------- Navigasi aktif ---------- */
+const links=[...document.querySelectorAll('nav li a')];
+const secs=links.map(a=>document.querySelector(a.getAttribute('href')));
+addEventListener('scroll',()=>{
+  let cur=0;secs.forEach((s,i)=>{if(s.getBoundingClientRect().top<120)cur=i});
+  links.forEach((a,i)=>a.classList.toggle('on',i===cur));
+},{passive:true});
+render();
+})();
+</script>
+</body>
+</html>
